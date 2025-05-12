@@ -85,7 +85,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en ubicar el área de datos de interés, en documentos que poseen un formato específico, para luego reconocer y validar tres líneas de caracteres que lo identifican unívocamente. El trabajo tendrá un presupuesto preliminar estimado de 600 horas y un costo estimado de U\$S 15.000, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en ubicar el área de datos de interés en documentos que poseen un formato específico, para luego reconocer y validar tres líneas de caracteres que lo identifican de forma unívoca. El trabajo tendrá un presupuesto preliminar estimado de 600 horas y un costo estimado de U\$S 15.000, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -106,7 +106,7 @@ Se adjunta a esta acta la planificación inicial.
 \section{1. Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-Asyst S.A., una empresa con 35 años de experiencia en la captura y procesamiento de documentos en el ámbito bancario, tiene clientes a los que les ha desarrollado sistemas de carga de datos manual a partir de imágenes, sobre los cuales, años atrás, ha ensayado soluciones de reconocimiento (sin utilizar inteligencia artificial) con resultados no muy buenos. Actualmente, busca expandir sus horizontes e incluir herramientas de inteligencia artificial que mejoren esos resultados, y faciliten la tarea a los clientes.
+Asyst S.A., una empresa con 35 años de experiencia en la captura y procesamiento de documentos en el ámbito bancario, tiene clientes a los que les ha desarrollado sistemas de carga de datos manual a partir de imágenes, sobre los cuales, años atrás, ha ensayado soluciones de reconocimiento (sin utilizar inteligencia artificial) con resultados por debajo de la expectativa mínima. En la actualidad, busca expandir sus horizontes e incluir herramientas de inteligencia artificial que mejoren esos resultados, y faciliten la tarea a los clientes.
 
 
 Si bien existen soluciones genéricas para el reconocimiento de documentos, y en particular, de caracteres, aplicarlos sobre todo el documento no resulta conveniente, debido a la cantidad de información extraída, el posprocesamiento que esto implica, y la baja tasa de reconocimiento del área de interés.
@@ -114,9 +114,9 @@ Si bien existen soluciones genéricas para el reconocimiento de documentos, y en
 El proyecto consiste en el procesamiento de documentos mediante imágenes, con el objetivo de obtener los datos que lo identifican, ubicados en un área determinada. 
 
 A partir de las imágenes capturadas, las que podrán ser a color o blanco y negro, se buscará identificar el rectángulo que contiene información relevante. Dentro de este rectángulo se encuentran 3 líneas de caracteres (números, espacios, guiones), con dos tipografías predominantes, aunque no exclusivas. A estas líneas se les aplicará reconocimiento de caracteres.\\
-Como característica adicional, cada una de estas líneas cuenta con un dígito verificador, que se validará y definirá si los datos identificados son correctos.
+Cada una de estas líneas cuenta con un dígito verificador, que se validará y definirá si los datos identificados son correctos.
 
-Adicionalmente, la información relevante también se encuentra en una línea inferior del documento, con una tipografía específica (distinta a las anteriores), con un dígito especial de inicio y otro de fin, pero sin dígitos verificadores.
+La información relevante también se encuentra en una línea inferior del documento, con una tipografía específica (distinta a las anteriores), con un dígito especial de inicio y otro de fin, pero sin dígitos verificadores.
 Será parte de este proyecto analizar y utilizar también esta información, si fuera útil y si mejorara el resultado.
 
 Se muestra en la figura \ref{fig:diagBloques} el diagrama de bloques.
@@ -164,20 +164,20 @@ La identificación de documentos con un formato determinado y homogéneo, que ab
 
 El presente proyecto comprende
 \begin{itemize}
-	\item Preprocesamiento de la imagen.
-	\item Identificación de área de interés.
-	\item Normalización de la imagen.
-	\item Reconocimiento de caracteres.
-	\item Validación del resultado obtenido.
-	\item Análisis de performance de la solución.
-	\item Análisis y selección del set de datos.
+	\item Preprocesamiento de la imagen
+	\item Identificación de área de interés
+	\item Normalización de la imagen
+	\item Reconocimiento de caracteres
+	\item Validación del resultado obtenido
+	\item Análisis de performance de la solución
+	\item Análisis y selección del set de datos
 \end{itemize}
 
 El presente proyecto no incluye
 \begin{itemize}
-	\item Captura de imágenes.
-	\item Incorporación a soluciones existentes.
-	\item La extensión de reconocimiento sobre otras áreas de interés presentes en el documento, pero que están fuera del alcance del presente proyecto.
+	\item Captura de imágenes
+	\item Incorporación a soluciones existentes
+	\item La extensión de reconocimiento sobre otras áreas de interés presentes en el documento, pero que están fuera del alcance del presente proyecto
 \end{itemize}
 
 \section{5. Supuestos del proyecto}
@@ -185,11 +185,11 @@ El presente proyecto no incluye
 
 Para el desarrollo del presente proyecto se establecen las siguientes pautas
 \begin{itemize}
-	\item El set de datos aportado por el cliente será suficiente para realizar el entrenamiento.
-	\item El cliente pondrá a disposición la información requerida en tiempo y forma.
-	\item Los recursos de hardware y software requeridos para llevar a cabo este proyecto serán proporcionados por el cliente. El responsable del proyecto podrá aportar los recursos que tuviese disponibles, siempre que existiese acuerdo con el cliente.
-	\item La solución obtenida debe ser performante en tiempo de reconocimiento.
-	\item La solución obtenida debe ser mejor que aplicar al documento un transformer multimodal como chatGPT, u otros modelos similares.
+	\item El set de datos aportado por el cliente será suficiente para realizar el entrenamiento
+	\item El cliente pondrá a disposición la información requerida en tiempo y forma
+	\item Los recursos de hardware y software requeridos para llevar a cabo este proyecto serán proporcionados por el cliente. El responsable del proyecto podrá aportar los recursos que tuviese disponibles, siempre que existiese acuerdo con el cliente
+	\item La solución obtenida debe ser performante en tiempo de reconocimiento
+	\item La solución obtenida debe ser mejor que aplicar al documento un transformer multimodal como chatGPT, u otros modelos similares
 \end{itemize}
 
 
