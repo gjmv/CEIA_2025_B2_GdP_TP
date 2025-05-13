@@ -85,7 +85,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en ubicar el área de datos de interés en documentos que poseen un formato específico, para luego reconocer y validar tres líneas de caracteres que lo identifican de forma unívoca. El trabajo tendrá un presupuesto preliminar estimado de 600 horas y un costo estimado de U\$S 15.000, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en ubicar el área de datos de interés en documentos que poseen un formato específico, para reconocer y validar tres líneas de caracteres que lo identifican de forma unívoca. El trabajo tendrá un presupuesto preliminar estimado de 600 horas y un costo estimado de U\$S 15.000, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -106,26 +106,24 @@ Se adjunta a esta acta la planificación inicial.
 \section{1. Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-Asyst S.A., una empresa con 35 años de experiencia en la captura y procesamiento de documentos en el ámbito bancario, tiene clientes a los que les ha desarrollado sistemas de carga de datos manual a partir de imágenes, sobre los cuales, años atrás, ha ensayado soluciones de reconocimiento (sin utilizar inteligencia artificial) con resultados por debajo de la expectativa mínima. En la actualidad, busca expandir sus horizontes e incluir herramientas de inteligencia artificial que mejoren esos resultados, y faciliten la tarea a los clientes.
+Asyst S.A., una empresa con 35 años de experiencia en la captura y procesamiento de documentos en el ámbito bancario, tiene clientes a los que les ha desarrollado sistemas de carga de datos manual a partir de imágenes, sobre los cuales, años atrás, ha ensayado soluciones de reconocimiento (sin utilizar inteligencia artificial) con resultados por debajo de la expectativa esperada. En la actualidad, busca expandir sus horizontes e incluir herramientas de inteligencia artificial que mejoren los resultados y faciliten la tarea a los clientes.
 
 
-Si bien existen soluciones genéricas para el reconocimiento de documentos, y en particular, de caracteres, aplicarlos sobre todo el documento no resulta conveniente, debido a la cantidad de información extraída, el posprocesamiento que esto implica, y la baja tasa de reconocimiento del área de interés.
+Si bien existen soluciones genéricas para el reconocimiento de documentos y caracteres, aplicarlos sobre todo el documento no resulta conveniente, debido a la cantidad de información extraída, el posprocesamiento que esto implica, y la baja tasa de reconocimiento del área de interés.
 
 El proyecto consiste en el procesamiento de documentos mediante imágenes, con el objetivo de obtener los datos que lo identifican, ubicados en un área determinada. 
 
 A partir de las imágenes capturadas, las que podrán ser a color o blanco y negro, se buscará identificar el rectángulo que contiene información relevante. Dentro de este rectángulo se encuentran 3 líneas de caracteres (números, espacios, guiones), con dos tipografías predominantes, aunque no exclusivas. A estas líneas se les aplicará reconocimiento de caracteres.\\
 Cada una de estas líneas cuenta con un dígito verificador, que se validará y definirá si los datos identificados son correctos.
 
-La información relevante también se encuentra en una línea inferior del documento, con una tipografía específica (distinta a las anteriores), con un dígito especial de inicio y otro de fin, pero sin dígitos verificadores.
-Será parte de este proyecto analizar y utilizar también esta información, si fuera útil y si mejorara el resultado.
+La información relevante también se encuentra en una línea inferior del documento, con una tipografía específica (distinta a las anteriores), con un dígito especial de inicio y otro de fin, sin dígitos verificadores.
+Será parte de este proyecto, analizar y utilizar esta información, si fuera útil para mejorar el resultado.
 
 Se muestra en la figura \ref{fig:diagBloques} el diagrama de bloques.
 
 El proyecto tendrá en cuenta que el rectángulo o área de interés puede verse afectado por trazos que invadan la zona, o por fondos que pueden perjudicar el reconocimiento. Por ese motivo, la solución contemplará el preprocesamiento de la imagen para eliminar o minimizar dicho ruido.
 
-El objetivo final del cliente es maximizar el reconocimiento de los documentos para reducir el ingreso de datos manual. Resulta muy importante el tiempo que demore el procesamiento de cada documento ya que podría incorporarse en soluciones donde la captura y reconocimiento sean necesarios para la decisión del destino del mismo.
-
-El set de datos contiene información sensible que no podrá ser publicada sin antes anonimizar o difuminar, pero es de uso libre dentro de la empresa.
+El set de datos contiene información privada que no podrá ser publicada sin antes anonimizar o difuminar.
 
 \begin{figure}[htpb]
 \centering 
@@ -156,16 +154,16 @@ Orientador    & \supname	      & \pertesupname 	& Director del Trabajo Final \\ 
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
-La identificación de documentos con un formato determinado y homogéneo, que abarque todas las etapas, desde el preprocesamiento de la imagen, hasta el análisis, identificación y validación del resultado obtenido, es decir, es una solución particular y completa para este tipo de documentos.
+Identificar documentos con un formato predeterminado y homogéneo, que abarque todas las etapas, desde el preprocesamiento de la imagen, hasta el análisis, identificación y validación del resultado obtenido.
 
 
 \section{4. Alcance del proyecto}
 \label{sec:alcance}
 
-El presente proyecto comprende
+El presente proyecto comprende:
 \begin{itemize}
 	\item Preprocesamiento de la imagen
-	\item Identificación de área de interés
+	\item Identificación del área de interés
 	\item Normalización de la imagen
 	\item Reconocimiento de caracteres
 	\item Validación del resultado obtenido
@@ -173,21 +171,21 @@ El presente proyecto comprende
 	\item Análisis y selección del set de datos
 \end{itemize}
 
-El presente proyecto no incluye
+El presente proyecto no incluye:
 \begin{itemize}
 	\item Captura de imágenes
 	\item Incorporación a soluciones existentes
-	\item La extensión de reconocimiento sobre otras áreas de interés presentes en el documento, pero que están fuera del alcance del presente proyecto
+	\item La extensión de reconocimiento sobre otras áreas de interés presentes en el documento
 \end{itemize}
 
 \section{5. Supuestos del proyecto}
 \label{sec:supuestos}
 
-Para el desarrollo del presente proyecto se establecen las siguientes pautas
+Para el desarrollo del presente proyecto se establece que:
 \begin{itemize}
 	\item El set de datos aportado por el cliente será suficiente para realizar el entrenamiento
 	\item El cliente pondrá a disposición la información requerida en tiempo y forma
-	\item Los recursos de hardware y software requeridos para llevar a cabo este proyecto serán proporcionados por el cliente. El responsable del proyecto podrá aportar los recursos que tuviese disponibles, siempre que existiese acuerdo con el cliente
+	\item Los recursos de hardware y software requeridos para llevar a cabo este proyecto serán proporcionados por el cliente. El responsable del proyecto podrá aportar los recursos que tuviese disponibles, siempre que exista acuerdo con el cliente
 	\item La solución obtenida debe ser performante en tiempo de reconocimiento
 	\item La solución obtenida debe ser mejor que aplicar al documento un transformer multimodal como chatGPT, u otros modelos similares
 \end{itemize}
