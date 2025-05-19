@@ -2,7 +2,7 @@
 11pt, % The default document font size, options: 10pt, 11pt, 12pt
 %codirector, % Uncomment to add a codirector to the title page
 ]{charter} 
-
+\usepackage{slashbox}
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
 \titulo{Identificación de documentos con reconocimiento de caracteres} 
@@ -61,10 +61,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
 1      & Se completa hasta el punto 5 inclusive                & {13} de {mayo} de 2025 \\ \hline
 1.1      & Correcciones versión 1                & {17} de {mayo} de 2025 \\ \hline
-%2      & Se completa hasta el punto 9 inclusive
-%		  Se puede agregar algo más \newline
-%		  En distintas líneas \newline
-%		  Así                                                    & {20} de {mayo} de 2025 \\ \hline
+2      & Se completa hasta el punto 9 inclusive                  & {20} de {mayo} de 2025 \\ \hline
 %3      & Se completa hasta el punto 12 inclusive                & {27} de {mayo} de 2025 \\ \hline
 %4      & Se completa el plan	                                 & {03} de {junio} de 2025 \\ \hline
 
@@ -200,151 +197,243 @@ Para el desarrollo del presente proyecto se establece que:
 \section{6. Product Backlog}
 \label{sec:backlog}
 
-El Product Backlog debe organizarse en cuatro \textbf{\textit{\'{e}picas}} fundamentales del proyecto. Cada \'{e}pica debe contener al menos dos historias de usuario que describan funcionalidades clave.
+\textbf{Criterio para la estimación de Story Points:} cada historia de usuario se evalúa en tres dimensiones fundamentales (dificultad, complejidad e incertidumbre) con puntuaciones según se muestra en el cuadro \ref{tab:storypoints}. Estos valores son sumados y redondeados al número más cercano (igual o superior) de la secuencia de Fibonacci (0, 1, 2, 3, 5, 8, 13, 21, 34).
 
-El Product Backlog debe permitir interpretar cómo será el proyecto y su funcionalidad. Se deben indicar claramente las prioridades entre las historias de usuario y si hay alguna opcional.
-
-Las historias de usuario deben ser breves, claras y medibles, expresando el rol, la necesidad y el propósito de cada funcionalidad. También deben tener una prioridad definida para facilitar la planificación de los sprints.
-
-Cada historia de usuario debe incluir una ponderación en \textit{Story Points}, un número entero que representa el tama\~no relativo de la historia. El criterio para calcular los Story Points debe indicarse explícitamente.
-
-Las historias deben seguir el formato: ``\textit{Como [rol], quiero [tal cosa] para [tal otra cosa]}''.
-
-Las \'{e}picas deben estructurarse de la siguiente forma:
+\begin{table}[ht]
+\caption{Evaluación Story Points}
+\label{tab:storypoints}
+\begin{tabularx}{\linewidth}{@{}|l|X|X|X|@{}}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\backslashbox{Dimensión}{Nivel} & Bajo 	& Medio 	& Alto	\\ \hline
+Dificultad    	& 2     & 5			& 8 	\\ \hline
+Complejidad   	& 2     & 8			& 21 	\\ \hline
+Incertidumbre   & 2		& 8			& 13 	\\ \hline
+\end{tabularx}
+\end{table}
 
 \begin{itemize}
-  \item \textbf{\'{E}pica 1}
+  \item \textbf{\'{E}pica 1} - Preparación del conjunto de datos.
     \begin{itemize}
-      \item HU1
-      \item HU2
+      \item HU1: como ingeniero de datos, quiero sistematizar y normalizar la carga de los datos para poder analizarlos de forma eficiente. \\
+      \begin{tabular}{p{0.33\linewidth} p{0.33\linewidth} p{0.33\linewidth}}
+      Dificultad: 5	& Complejidad: 2 & Incertidumbre: 2 \\
+      Suma: 9		& \textbf{Story Points: 13} & Prioridad: alta \\
+      \end{tabular}
+      \item HU2: como desarrollador, quiero preprocesar los datos para mejorar su calidad. \\
+      \begin{tabular}{p{0.33\linewidth} p{0.33\linewidth} p{0.33\linewidth}}
+      Dificultad: 5	& Complejidad: 8 & Incertidumbre: 8 \\
+      Suma: 21		& \textbf{Story Points: 21} & Prioridad: alta \\
+      \end{tabular}
     \end{itemize}
-  \item \textbf{\'{E}pica 2}
+  \item \textbf{\'{E}pica 2} - Procesamiento del conjunto de datos.
     \begin{itemize}
-      \item HU3
-      \item HU4
+      \item HU3: como investigador, quiero entrenar un modelo de inteligencia artificial para identificar los datos del documento. \\
+      \begin{tabular}{p{0.33\linewidth} p{0.33\linewidth} p{0.33\linewidth}}
+      Dificultad: 5	& Complejidad: 21 & Incertidumbre: 8 \\
+      Suma: 34		& \textbf{Story Points: 34} & Prioridad: alta \\
+      \end{tabular}
+      \item HU4: como ingeniero de inteligencia artificial, quiero evaluar el modelo para medir su reconocimiento. \\
+      \begin{tabular}{p{0.33\linewidth} p{0.33\linewidth} p{0.33\linewidth}}
+      Dificultad: 2	& Complejidad: 2 & Incertidumbre: 2 \\
+      Suma: 6		& \textbf{Story Points: 8} & Prioridad: alta \\
+      \end{tabular}
     \end{itemize}
-  \item \textbf{\'{E}pica 3}
+  \item \textbf{\'{E}pica 3} - Área de interés complementaria.
     \begin{itemize}
-      \item HU5
-      \item HU6
+      \item HU5: como investigador, quiero entrenar el modelo de inteligencia artificial sobre el área de interés complementaria. \\
+      \begin{tabular}{p{0.33\linewidth} p{0.33\linewidth} p{0.33\linewidth}}
+      Dificultad: 5	& Complejidad: 8 & Incertidumbre: 8 \\
+      Suma: 21		& \textbf{Story Points: 21} & Prioridad: media \\
+      \end{tabular}
+      \item HU6: como ingeniero de inteligencia artificial, quiero unificar el reconocimiento, para utilizar el área principal y el área complementaria en el mismo modelo. \\
+      \begin{tabular}{p{0.33\linewidth} p{0.33\linewidth} p{0.33\linewidth}}
+      Dificultad: 5	& Complejidad: 8 & Incertidumbre: 8 \\
+      Suma: 21		& \textbf{Story Points: 21} & Prioridad: media - opcional \\
+      \end{tabular}
     \end{itemize}
-  \item \textbf{\'{E}pica 4}
+\newpage
+  \item \textbf{\'{E}pica 4} - Eficacia y eficiencia de la solución.
     \begin{itemize}
-      \item HU7
-      \item HU8
+      \item HU7: como usuario final, quiero verificar el porcentaje y tiempo de reconocimiento de la solución. \\
+      \begin{tabular}{p{0.33\linewidth} p{0.33\linewidth} p{0.33\linewidth}}
+      Dificultad: 2	& Complejidad: 2 & Incertidumbre: 2 \\
+      Suma: 6		& \textbf{Story Points: 8} & Prioridad: baja \\
+      \end{tabular}
+      \item HU8: como investigador, quiero aplicar un modelo transformer multimodal para evaluar su tiempo de procesamiento y efectividad. \\
+      \begin{tabular}{p{0.33\linewidth} p{0.33\linewidth} p{0.33\linewidth}}
+      Dificultad: 8	& Complejidad: 8 & Incertidumbre: 8 \\
+      Suma: 24		& \textbf{Story Points: 34} & Prioridad: alta \\
+      \end{tabular}
     \end{itemize}
-\end{itemize}
-
-\textbf{Reglas para definir historias de usuario:}
-\begin{itemize}
-  \item Ser concisas y claras.
-  \item Expresarlas en términos cuantificables y medibles.
-  \item No dejar margen para interpretaciones ambiguas.
-  \item Indicar claramente su prioridad y si son opcionales.
-  \item Considerar regulaciones y normas vigentes.
 \end{itemize}
 
 \section{7. Criterios de aceptación de historias de usuario}
 \label{sec:criteriosAceptacion}
 
-Los criterios de aceptación deben establecerse para cada historia de usuario, asegurando que se cumplan las condiciones necesarias para que la funcionalidad sea validada correctamente.
-
-Cada historia debe tener criterios medibles, específicos y verificables. Deben permitir validar que se cumple con las necesidades del usuario.
-
-Se estructuran de forma análoga a las \'{e}picas del backlog:
-
 \begin{itemize}
-  \item \textbf{\'{E}pica 1}
+  \item \textbf{\'{E}pica 1} - Preparación del conjunto de datos.
     \begin{itemize}
-      \item Criterios de aceptación HU1
-      \item Criterios de aceptación HU2
+      \item Criterios de aceptación HU1:
+	    \begin{itemize}
+			\item El conjunto de datos contiene al menos 30.000 imágenes.
+			\item El nombre del archivo de imagen debe esta compuesto por el identificador del documento.
+			\item La imagen tiene una resolución mínima de 200 puntos por pulgada.
+			\item El archivo de imagen contiene solo el frente del documento.
+	    \end{itemize}
+      \item Criterios de aceptación HU2:
+	    \begin{itemize}
+			\item Imágenes sin trazos y fondos que generen ruido.
+			\item Imágenes en formato esperado por el modelo de inteligencia artificial.
+			\item Áreas de interés identificadas.
+	    \end{itemize}
     \end{itemize}
-  \item \textbf{\'{E}pica 2}
+  \item \textbf{\'{E}pica 2} - Procesamiento del conjunto de datos.
     \begin{itemize}
-      \item Criterios de aceptación HU3
-      \item Criterios de aceptación HU4
+      \item Criterios de aceptación HU3:
+	    \begin{itemize}
+			\item Modelo entrenado con el 70\% de los datos.
+			\item El modelo identifica datos relevantes en el área de interés principal.
+			\item El modelo reconoce las dos tipografías predominantes.
+	    \end{itemize}
+      \item Criterios de aceptación HU4:
+	    \begin{itemize}
+			\item Modelo evaluado con el 30\% de los datos.
+			\item Líneas reconocidas verificadas con la rutina de dígito verificador.
+			\item Reconocimiento evaluado contra el nombre del archivo.
+	    \end{itemize}
     \end{itemize}
-  \item \textbf{\'{E}pica 3}
+  \item \textbf{\'{E}pica 3} - Área de interés complementaria.
     \begin{itemize}
-      \item Criterios de aceptación HU5
-      \item Criterios de aceptación HU6
+      \item Criterios de aceptación HU5:
+	    \begin{itemize}
+			\item Modelo entrenado con el 70\% de los datos.
+			\item El modelo identifica datos relevantes en el área de interés complementaria.
+			\item El reconocimiento identifica el caracter de inicio y de fin.
+	    \end{itemize}
+      \item Criterios de aceptación HU6:
+	    \begin{itemize}
+			\item La solución analiza las dos áreas de interés.
+			\item La salida final esta unificada.
+			\item Las métricas de reconocimiento están promediadas.
+	    \end{itemize}
     \end{itemize}
-  \item \textbf{\'{E}pica 4}
+\newpage
+  \item \textbf{\'{E}pica 4} - Eficacia y eficiencia de la solución.
     \begin{itemize}
-      \item Criterios de aceptación HU7
-      \item Criterios de aceptación HU8
+      \item Criterios de aceptación HU7:
+	    \begin{itemize}
+			\item La solución reporta el tiempo empleado en el procesamiento.
+			\item La solución reporta la confiabilidad del resultado obtenido.
+			\item La solución reporta si el documento fue reconocido correctamente.
+	    \end{itemize}
+      \item Criterios de aceptación HU8:
+	    \begin{itemize}
+			\item El modelo transformer multimodal (MTM) procesa los archivos sin preprocesamiento previo.
+			\item El MTM reporta el tiempo empleado en el procesamiento.
+			\item El MTM realiza la validación de dígito verificador y reporta el resultado.
+	    \end{itemize}
     \end{itemize}
-\end{itemize}
-
-\textbf{Reglas para definir criterios de aceptación:}
-\begin{itemize}
-  \item Medibles y verificables.
-  \item Especificar cuándo una historia se considera completada.
-  \item Incluir condiciones específicas.
-  \item No ambiguos.
-  \item Probables de testear funcional o técnicamente.
-  \item Mínimo 3 criterios por HU.
 \end{itemize}
 
 \section{8. Fases de CRISP-DM}
 
 \begin{enumerate}
-  \item \textbf{Comprensión del negocio:} objetivo, valor agregado de IA, métricas de éxito.
-  \item \textbf{Comprensión de los datos:} tipo, origen, cantidad, calidad.
-  \item \textbf{Preparación de los datos:} características clave, transformaciones necesarias.
-  \item \textbf{Modelado:} tipo de problema, algoritmos posibles.
-  \item \textbf{Evaluación del modelo:} métricas de rendimiento.
-  \item \textbf{Despliegue del modelo (opcional):} tipo de despliegue y herramientas.
+  \item \textbf{Comprensión del negocio:} el objetivo del proyecto es identificar los documentos mediante el procesamiento de las imágenes, para reducir la carga manual de datos. \\
+  La incorporación de inteligencia artificial al proceso permite mejorar los tiempos y optimizar recursos. \\
+  Las métricas de éxito serán el porcentaje de reconocimiento y el tiempo de procesamiento.
+  \item \textbf{Comprensión de los datos:} Los datos utilizados son documentos provenientes del sistema de carga de datos manual, capturados por dispositivos que cumplen con la resolución mínima establecida y correctamente alineados. En baja proporción pueden contener sellos, trazos de escritura u otro tipo de ruido. Se dispone de una muestra de más de 30.000 documentos.
+  \item \textbf{Preparación de los datos:} la preparación de los datos incluye la normalización de los archivos de imagen. Se ajustará nombre y formato, se identificarán de las áreas de interés, y se realizará limpieza de la imagen ante posibles ruidos.
+  \item \textbf{Modelado:} se buscarán modelos de detección de objetos basados en redes neuronales convolucionales que permitan identificar las áreas de interés. Para el reconocimiento de caracteres se probarán modelos de redes neuronales convolucionales orientados al reconocimiento de caracteres. Esta fase se encuentra abierta a cambios si durante el análisis se encuentran soluciones que pueden mejorar los resultados.
+  \item \textbf{Evaluación del modelo:} El desempeño se evaluará a partir de la cantidad de documentos que validen correctamente el dígito verificador, sobre el total procesado. Además, se medirá el tiempo medio y máximo que demore el procesamiento por documento.
 \end{enumerate}
 
+\newpage
 \section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-A partir de cada HU, descomponer en tareas concretas, técnicas y medibles:
+A partir de cada HU, se descompusieron tareas concretas, técnicas y medibles.
 
-\begin{itemize}
-  \item Duración estimada: entre 2 y 8 h. Evitar tareas genéricas.
-  \item Si una tarea excede 8 h, dividirla.
-  \item Indicar prioridad relativa (Alta, Media, Baja).
-\end{itemize}
+\textbf{Criterios para estimar tiempos:} como parte del proyecto abarca investigación de los modelos aplicables, hay tareas que aun no pueden descomponerse en tareas menores. Es por eso que se utilizaron estimaciones superiores a 8 hs., que más adelante podrán ser segmentadas. Las estimaciones se basaron en experiencias previas donde la incertidumbre fue similar.
 
-\begin{table}[htpb]
+\textbf{Total estimado tareas:} 544 horas
+
+El tiempo indicado no incluye horas para la preparación del proyecto inicial, estimado en 48 hs., preparación del informe final, estimado en 48 hs. y la presentación del proyecto, estimada en 24 hs.
+
+\textbf{Total estimado proyecto:} 664 horas
+
+
+\begin{table}[H]
+\caption{Desglose de tareas}
+%\label{tab:tareas1}
 \centering
-\begin{tabularx}{\linewidth}{@{}|X|X|c|c|@{}}
+\begin{tabularx}{\linewidth}{@{}|l|X|c|c|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0}
 Historia de usuario & Tarea técnica & Estimación & Prioridad \\ \hline
-HU1 & Tarea 1 HU1 & 6 h & Alta \\ \hline
-HU1 & Tarea 2 HU1 & 8 h & Alta \\ \hline
-HU2 & Tarea 1 HU2 & 5 h & Media \\ \hline
-HU2 & Tarea 2 HU2 & 6 h & Alta \\ \hline
-... & ... & ... & ... \\ \hline
+HU1 & Crear aplicación auxiliar para mostrar imagen y realizar carga de identificadores faltantes & 24 h & Alta \\ \hline
+HU1 & Cambiar nombre a los archivos con su identificador de documento & 4 h & Alta \\ \hline
+HU1 & Descartar imágenes con menos de 200 puntos por pulgada & 4 h & Alta \\ \hline
+HU1 & Extraer imagen de frente en archivos multipágina & 4 h & Alta \\ \hline
+
+HU2 & Cargar imágenes y convertirlas a formato admitido por el modelo & 8 h & Alta \\ \hline
+HU2 & Buscar modelos para eliminación de ruido en imágenes & 32 h & Alta \\ \hline
+HU2 & Analizar, comparar y seleccionar modelo & 8 h & Alta \\ \hline
+HU2 & Implementar modelo & 32 h & Alta \\ \hline
+HU2 & Ejecutar modelo sobre el conjunto de datos, realizar limpieza & 8 h & Alta \\ \hline
+HU2 & Separar conjunto de datos para entrenamiento y para evaluación & 4 h & Alta \\ \hline
+
+HU3 & Buscar modelos para reconocimiento de caracteres & 40 h & Alta \\ \hline
+HU3 & Analizar, comparar y seleccionar modelo & 32 h & Alta \\ \hline
+HU3 & Implementar modelo & 40 h & Alta \\ \hline
+HU3 & Entrenar modelo sobre el conjunto de datos & 16 h & Alta \\ \hline
+
+HU4 & Ejecutar modelo sobre el conjunto de datos de evaluación & 8 h & Alta \\ \hline
+HU4 & Comparar resultados contra objetivo & 8 h & Alta \\ \hline
+HU4 & Analizar métricas obtenidas & 8 h & Alta \\ \hline
+HU4 & Reunión con el cliente para presentar resultados obtenidos & 4 h & Alta \\ \hline
+
 \end{tabularx}
 \end{table}
 
-\textbf{Criterios para estimar tiempos:}
-\begin{itemize}
-  \item Considerar dificultad, complejidad técnica y grado de incertidumbre de cada tarea.
-  \item Evitar subestimar el esfuerzo requerido. Si una tarea supera las 8 h, dividirla en subtareas.
-  \item Basar la estimación en la experiencia propia o en referencias de tareas similares.
-\end{itemize}
+\begin{table}[H]
+\caption{Desglose de tareas (Continuación)}
+%\label{tab:tareas2}
+\centering
+\begin{tabularx}{\linewidth}{@{}|l|X|c|c|@{}}
+\hline
+\rowcolor[HTML]{C0C0C0}
+Historia de usuario & Tarea técnica & Estimación & Prioridad \\ \hline
 
-\textbf{Sobre la prioridad:}
-\begin{itemize}
-  \item Asignar una prioridad relativa (Alta, Media o Baja) según la relevancia funcional de la tarea y su impacto en los entregables.
-  \item Priorizar tareas que estén vinculadas a criterios de aceptación de las HU o que sean necesarias para desbloquear otras.
-  \item Incluir tareas opcionales solo si están bien justificadas.
-\end{itemize}
+HU5 & Analizar y seleccionar modelo para el área alternativa & 16 h & Alta \\ \hline
+HU5 & Implementar modelo & 32 h & Alta \\ \hline
+HU5 & Entrenar modelo sobre el conjunto de datos & 16 h & Alta \\ \hline
+HU5 & Ejecutar modelo sobre el conjunto de datos de evaluación & 4 h & Alta \\ \hline
 
-\textbf{Recomendaciones generales:}
-\begin{itemize}
-  \item Incluir al menos dos tareas por historia de usuario.
-  \item El total estimado debe ser coherente con la planificación global de unas 600 horas (la cantidad de horas sugeridas para un trabajo de posgrado).
-  \item Este desglose se utilizará en las secciones siguientes para armar el diagrama de Gantt (sección 10) y la planificación de sprints (sección 11).
-  \item Recordar que la calidad del desglose impacta directamente en la calidad de la planificación del proyecto.
-\end{itemize}
+HU6 & Investigar modelos que apliquen simultáneamente en ambas áreas de interés & 40 h & Media \\ \hline
+HU6 & Implementación modelo dual & 40 h & Media \\ \hline
+HU6 & Evaluar resultado de modelo dual & 8 h & Media \\ \hline
+HU6 & Reunión con el cliente para presentar resultados & 4 h & Media \\ \hline
+HU6 & Crear objeto para salida de resultados y métricas & 4 h & Media \\ \hline
 
+HU7 & Crear reportes para métricas de tiempo de ejecución & 8 h & Alta \\ \hline
+HU7 & Analizar reportes para métricas de tiempo de ejecución & 4 h & Alta \\ \hline
+HU7 & Crear reportes para métricas de confiabilidad & 8 h & Alta \\ \hline
+HU7 & Analizar reportes para métricas de confiabilidad & 4 h & Alta \\ \hline
+HU7 & Crear reportes para métricas de reconocimiento & 8 h & Alta \\ \hline
+HU7 & Analizar reportes para métricas de reconocimiento & 4 h & Alta \\ \hline
 
+HU8 & Investigar modelos transformer multimodal & 24 h & Alta \\ \hline
+HU8 & Implementar prueba sobre modelo & 16 h & Alta \\ \hline
+HU8 & Evaluar resultado del modelo sobre tiempo de ejecución & 4 h & Alta \\ \hline
+HU8 & Evaluar resultado del modelo sobre reconocimiento & 4 h & Alta \\ \hline
+HU8 & Comparar resultados entre modelo propio y transformer multimodal & 8 h & Alta \\ \hline
+HU8 & Reunión con el cliente para presentar resultados & 4 h & Alta \\ \hline
+
+\end{tabularx}
+\end{table}
+
+\newpage
 \section{10. Diagrama de Gantt}
 \label{sec:gantt}
 
