@@ -58,12 +58,13 @@
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
-0      & Creación del documento                                 &\fechaInicioName \\ \hline
-1      & Se completa hasta el punto 5 inclusive                & {13} de {mayo} de 2025 \\ \hline
+0      & Creación del documento                  &\fechaInicioName \\ \hline
+1      & Se completa hasta el punto 5 inclusive  & {13} de {mayo} de 2025 \\ \hline
 1.1      & Correcciones versión 1                & {17} de {mayo} de 2025 \\ \hline
-2      & Se completa hasta el punto 9 inclusive                  & {20} de {mayo} de 2025 \\ \hline
-%3      & Se completa hasta el punto 12 inclusive                & {27} de {mayo} de 2025 \\ \hline
-%4      & Se completa el plan	                                 & {03} de {junio} de 2025 \\ \hline
+2      & Se completa hasta el punto 9 inclusive  & {20} de {mayo} de 2025 \\ \hline
+2.1      & Correcciones versión 2                & {25} de {mayo} de 2025 \\ \hline
+%3      & Se completa hasta el punto 12 inclusive & {27} de {mayo} de 2025 \\ \hline
+%4      & Se completa el plan	                  & {03} de {junio} de 2025 \\ \hline
 
 % Si hay más correcciones pasada la versión 4 también se deben especificar acá
 
@@ -246,7 +247,7 @@ Incertidumbre   & 2		& 8			& 13 	\\ \hline
       Dificultad: 5	& Complejidad: 8 & Incertidumbre: 8 \\
       Suma: 21		& \textbf{Story Points: 21} & Prioridad: media \\
       \end{tabular}
-      \item HU6: como ingeniero de inteligencia artificial, quiero unificar el reconocimiento, para utilizar el área principal y el área complementaria en el mismo modelo. \\
+      \item HU6: como ingeniero de inteligencia artificial, quiero unificar el reconocimiento para utilizar el área principal y el área complementaria en el mismo modelo. \\
       \begin{tabular}{p{0.33\linewidth} p{0.33\linewidth} p{0.33\linewidth}}
       Dificultad: 5	& Complejidad: 8 & Incertidumbre: 8 \\
       Suma: 21		& \textbf{Story Points: 21} & Prioridad: media - opcional \\
@@ -342,25 +343,27 @@ Incertidumbre   & 2		& 8			& 13 	\\ \hline
   \item \textbf{Comprensión del negocio:} el objetivo del proyecto es identificar los documentos mediante el procesamiento de las imágenes, para reducir la carga manual de datos. \\
   La incorporación de inteligencia artificial al proceso permite mejorar los tiempos y optimizar recursos. \\
   Las métricas de éxito serán el porcentaje de reconocimiento y el tiempo de procesamiento.
-  \item \textbf{Comprensión de los datos:} Los datos utilizados son documentos provenientes del sistema de carga de datos manual, capturados por dispositivos que cumplen con la resolución mínima establecida y correctamente alineados. En baja proporción pueden contener sellos, trazos de escritura u otro tipo de ruido. Se dispone de una muestra de más de 30.000 documentos.
+  \item \textbf{Comprensión de los datos:} los datos utilizados son documentos provenientes del sistema de carga de datos manual, capturados por dispositivos que cumplen con la resolución mínima establecida y correctamente alineados. En baja proporción pueden contener sellos, trazos de escritura u otro tipo de ruido. Se dispone de una muestra de más de 30.000 documentos.
   \item \textbf{Preparación de los datos:} la preparación de los datos incluye la normalización de los archivos de imagen. Se ajustará nombre y formato, se identificarán de las áreas de interés, y se realizará limpieza de la imagen ante posibles ruidos.
   \item \textbf{Modelado:} se buscarán modelos de detección de objetos basados en redes neuronales convolucionales que permitan identificar las áreas de interés. Para el reconocimiento de caracteres se probarán modelos de redes neuronales convolucionales orientados al reconocimiento de caracteres. Esta fase se encuentra abierta a cambios si durante el análisis se encuentran soluciones que pueden mejorar los resultados.
-  \item \textbf{Evaluación del modelo:} El desempeño se evaluará a partir de la cantidad de documentos que validen correctamente el dígito verificador, sobre el total procesado. Además, se medirá el tiempo medio y máximo que demore el procesamiento por documento.
+  \item \textbf{Evaluación del modelo:} el desempeño se evaluará a partir de la cantidad de documentos que validen correctamente el dígito verificador, sobre el total procesado. Además, se medirá el tiempo medio y máximo que demore el procesamiento por documento.
 \end{enumerate}
 
 \newpage
 \section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-A partir de cada HU, se descompusieron tareas concretas, técnicas y medibles.
+A partir de cada HU, se desglosan tareas concretas, técnicas y medibles.
 
-\textbf{Criterios para estimar tiempos:} como parte del proyecto abarca investigación de los modelos aplicables, hay tareas que aun no pueden descomponerse en tareas menores. Es por eso que se utilizaron estimaciones superiores a 8 hs., que más adelante podrán ser segmentadas. Las estimaciones se basaron en experiencias previas donde la incertidumbre fue similar.
+\textbf{Criterios para estimar tiempos:} las estimaciones se basaron en experiencias previas donde la incertidumbre fue similar.
 
-\textbf{Total estimado tareas:} 544 horas
+\textbf{Investigación:} el proyecto incluirá tareas de investigación que no se encuentran detalladas por no contar con el conocimiento requerido al momento del armado del presente plan. Para estas tareas se estiman 80 horas.
 
-El tiempo indicado no incluye horas para la preparación del proyecto inicial, estimado en 48 hs., preparación del informe final, estimado en 48 hs. y la presentación del proyecto, estimada en 24 hs.
+\textbf{Planificación y presentación:} el tiempo indicado no incluye las 48 horas estimadas para la preparación del proyecto inicial, las 48 horas del informe final ni las 24 horas de la presentación del proyecto.
 
-\textbf{Total estimado proyecto:} 664 horas
+\textbf{Total estimado tareas:} 440 horas
+
+\textbf{Total estimado proyecto:} 640 horas
 
 
 \begin{table}[H]
@@ -371,22 +374,38 @@ El tiempo indicado no incluye horas para la preparación del proyecto inicial, e
 \hline
 \rowcolor[HTML]{C0C0C0}
 Historia de usuario & Tarea técnica & Estimación & Prioridad \\ \hline
-HU1 & Crear aplicación auxiliar para mostrar imagen y realizar carga de identificadores faltantes & 24 h & Alta \\ \hline
+HU1 & Diseñar aplicación auxiliar de carga de datos & 8 h & Alta \\ \hline
+HU1 & Implementar aplicación auxiliar & 8 h & Alta \\ \hline
+HU1 & Procesamiento inicial de imágenes & 8 h & Alta \\ \hline
 HU1 & Cambiar nombre a los archivos con su identificador de documento & 4 h & Alta \\ \hline
 HU1 & Descartar imágenes con menos de 200 puntos por pulgada & 4 h & Alta \\ \hline
 HU1 & Extraer imagen de frente en archivos multipágina & 4 h & Alta \\ \hline
 
 HU2 & Cargar imágenes y convertirlas a formato admitido por el modelo & 8 h & Alta \\ \hline
-HU2 & Buscar modelos para eliminación de ruido en imágenes & 32 h & Alta \\ \hline
-HU2 & Analizar, comparar y seleccionar modelo & 8 h & Alta \\ \hline
-HU2 & Implementar modelo & 32 h & Alta \\ \hline
-HU2 & Ejecutar modelo sobre el conjunto de datos, realizar limpieza & 8 h & Alta \\ \hline
-HU2 & Separar conjunto de datos para entrenamiento y para evaluación & 4 h & Alta \\ \hline
+HU2 & Buscar modelos para eliminación de ruido en imágenes & 8 h & Alta \\ \hline
+HU2 & Probar modelos & 8 h & Alta \\ \hline
+HU2 & Seleccionar modelo & 8 h & Alta \\ \hline
 
-HU3 & Buscar modelos para reconocimiento de caracteres & 40 h & Alta \\ \hline
-HU3 & Analizar, comparar y seleccionar modelo & 32 h & Alta \\ \hline
-HU3 & Implementar modelo & 40 h & Alta \\ \hline
-HU3 & Entrenar modelo sobre el conjunto de datos & 16 h & Alta \\ \hline
+HU2 & Implementar modelo base & 8 h & Alta \\ \hline
+HU2 & Pruebas de hiperparámetros del modelo & 8 h & Alta \\ \hline
+HU2 & Pruebas sobre modelo & 8 h & Alta \\ \hline
+HU2 & Ajustes sobre modelo & 8 h & Alta \\ \hline
+
+HU2 & Ejecutar modelo sobre el conjunto de datos (realizar limpieza) & 8 h & Alta \\ \hline
+HU2 & Separar conjunto de datos para entrenamiento y evaluación & 4 h & Alta \\ \hline
+
+HU3 & Analizar modelos para reconocimiento de caracteres & 8 h & Alta \\ \hline
+HU3 & Comparar modelos & 8 h & Alta \\ \hline
+HU3 & Seleccionar modelo & 8 h & Alta \\ \hline
+
+HU3 & Implementar modelo base & 8 h & Alta \\ \hline
+HU3 & Pruebas hiperparámetros del modelo & 8 h & Alta \\ \hline
+HU3 & Ajuste hiperparámetros del modelo & 8 h & Alta \\ \hline
+HU3 & Pruebas sobre modelo & 8 h & Alta \\ \hline
+HU3 & Ajustes modelo & 8 h & Alta \\ \hline
+
+HU3 & Entrenar modelo sobre el conjunto de datos & 8 h & Alta \\ \hline
+HU3 & Ajustar modelo y re-entrenar & 8 h & Alta \\ \hline
 
 HU4 & Ejecutar modelo sobre el conjunto de datos de evaluación & 8 h & Alta \\ \hline
 HU4 & Comparar resultados contra objetivo & 8 h & Alta \\ \hline
@@ -405,13 +424,27 @@ HU4 & Reunión con el cliente para presentar resultados obtenidos & 4 h & Alta \
 \rowcolor[HTML]{C0C0C0}
 Historia de usuario & Tarea técnica & Estimación & Prioridad \\ \hline
 
-HU5 & Analizar y seleccionar modelo para el área alternativa & 16 h & Alta \\ \hline
-HU5 & Implementar modelo & 32 h & Alta \\ \hline
-HU5 & Entrenar modelo sobre el conjunto de datos & 16 h & Alta \\ \hline
+HU5 & Analizar modelo para el área alternativa & 8 h & Alta \\ \hline
+HU5 & Seleccionar modelo para el área alternativa & 8 h & Alta \\ \hline
+
+HU5 & Implementar modelo base & 8 h & Alta \\ \hline
+HU5 & Ajuste hiperparámetros del modelo & 8 h & Alta \\ \hline
+HU5 & Pruebas sobre modelo & 8 h & Alta \\ \hline
+HU5 & Ajustes modelo & 8 h & Alta \\ \hline
+
+HU5 & Entrenar modelo sobre el conjunto de datos & 8 h & Alta \\ \hline
+HU5 & Ajustar modelo y re-entrenar & 8 h & Alta \\ \hline
+
 HU5 & Ejecutar modelo sobre el conjunto de datos de evaluación & 4 h & Alta \\ \hline
 
-HU6 & Investigar modelos que apliquen simultáneamente en ambas áreas de interés & 40 h & Media \\ \hline
-HU6 & Implementación modelo dual & 40 h & Media \\ \hline
+HU6 & Investigar modelos que apliquen simultáneamente en ambas áreas de interés & 8 h & Media \\ \hline
+
+HU6 & Implementar modelo dual & 8 h & Alta \\ \hline
+HU6 & Pruebas hiperparámetros del modelo & 8 h & Alta \\ \hline
+HU6 & Ajuste hiperparámetros del modelo & 8 h & Alta \\ \hline
+HU6 & Pruebas sobre modelo & 8 h & Alta \\ \hline
+HU6 & Ajustes modelo & 8 h & Alta \\ \hline
+
 HU6 & Evaluar resultado de modelo dual & 8 h & Media \\ \hline
 HU6 & Reunión con el cliente para presentar resultados & 4 h & Media \\ \hline
 HU6 & Crear objeto para salida de resultados y métricas & 4 h & Media \\ \hline
@@ -423,8 +456,12 @@ HU7 & Analizar reportes para métricas de confiabilidad & 4 h & Alta \\ \hline
 HU7 & Crear reportes para métricas de reconocimiento & 8 h & Alta \\ \hline
 HU7 & Analizar reportes para métricas de reconocimiento & 4 h & Alta \\ \hline
 
-HU8 & Investigar modelos transformer multimodal & 24 h & Alta \\ \hline
-HU8 & Implementar prueba sobre modelo & 16 h & Alta \\ \hline
+HU8 & Investigar modelos transformer multimodal & 8 h & Alta \\ \hline
+HU8 & Preparar prueba sobre modelo transformer multimodal & 8 h & Alta \\ \hline
+
+HU8 & Ejecutar prueba sobre modelo & 8 h & Alta \\ \hline
+HU8 & Recolectar datos de resultados de prueba & 8 h & Alta \\ \hline
+
 HU8 & Evaluar resultado del modelo sobre tiempo de ejecución & 4 h & Alta \\ \hline
 HU8 & Evaluar resultado del modelo sobre reconocimiento & 4 h & Alta \\ \hline
 HU8 & Comparar resultados entre modelo propio y transformer multimodal & 8 h & Alta \\ \hline
