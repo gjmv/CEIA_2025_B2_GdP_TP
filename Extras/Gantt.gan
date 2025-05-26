@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Planificación Trabajo Final - CEIA" company="" webLink="http://" view-date="2025-04-01" view-index="0" gantt-divider-location="364" resource-divider-location="300" version="3.3.3316" locale="es_ES">
+    <description/>
+    <view zooming-state="default:8" id="gantt-chart">
+        <field id="tpd15" name="Notas" width="20" order="0"/>
+        <field id="tpd3" name="Nombre" width="198" order="0"/>
+        <field id="tpd4" name="Fecha de inicio" width="75" order="1"/>
+        <field id="tpd5" name="Fecha de fin" width="75" order="2"/>
+        <option id="taskLabelLeft" value="name"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+        <option id="color.recent"><![CDATA[#cc0033 #006666 #3399ff #ccffcc]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nombre" width="210" order="0"/>
+        <field id="1" name="Función" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars base-id="Ninguna">
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" uid="ebfa47e776db4e6195bd9c92d4392d93" name="Inicio proyecto" meeting="true" start="2025-04-29" duration="0" complete="0" expand="true">
+            <depend id="1" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="1" uid="659e44307d31415bb2da9d22bbbb5ad7" name="Planificación proyecto" color="#ccffcc" meeting="false" start="2025-04-29" duration="36" complete="0" expand="true">
+            <depend id="6" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="17" uid="085fc4356b0944d6a535a4f7101ff750" name="Reunión con cliente" color="#cc0033" meeting="false" start="2025-06-16" duration="1" complete="0" expand="true">
+            <depend id="6" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="18" uid="09e78af7771a408e9ad330f42958cf4c" name="Reunión con director" color="#cc0033" meeting="false" start="2025-06-16" duration="1" complete="0" expand="true">
+            <depend id="6" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="6" uid="6ac1eb204255464b917e6e7128924956" name="Sprint 1" meeting="false" start="2025-06-18" duration="10" complete="0" expand="true">
+            <depend id="7" type="2" difference="0" hardness="Strong"/>
+            <task id="19" uid="28cccb3bf34540f68feabb6f36f0d3e6" name="Implementación app carga" meeting="false" start="2025-06-18" duration="5" complete="0" expand="true">
+                <depend id="20" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="20" uid="f29b49c586424d1ebe170107a821cf60" name="Procesamiento inicial de datos" meeting="false" start="2025-06-25" duration="5" complete="0" expand="true">
+                <depend id="21" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="22" uid="85efc9c5050a42aba7f6ccc00a452728" name="Investigación modelos limpieza" color="#006666" meeting="false" start="2025-06-18" duration="10" complete="0" expand="true">
+                <depend id="21" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="7" uid="3758ce48507f43589493f00cdb403ab6" name="Sprint 2" meeting="false" start="2025-07-02" duration="10" complete="0" expand="true">
+            <depend id="8" type="2" difference="0" hardness="Strong"/>
+            <task id="21" uid="fac376de79d246b48890be8b876b61f2" name="Implementación modelo limpieza" meeting="false" start="2025-07-02" duration="5" complete="0" expand="true">
+                <depend id="23" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="23" uid="be896a60a40b4daabbb75a6d576ced5f" name="Pruebas modelo limpieza" meeting="false" start="2025-07-09" duration="5" complete="0" expand="true">
+                <depend id="25" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="24" uid="122c787cc792463a80afcc50febac601" name="Investigación modelos reconocimiento" color="#006666" meeting="false" start="2025-07-02" duration="10" complete="0" expand="true">
+                <depend id="26" type="2" difference="5" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="8" uid="6e054714328241a297b532de8e0875a1" name="Sprint 3" meeting="false" start="2025-07-16" duration="10" complete="0" expand="true">
+            <depend id="9" type="2" difference="0" hardness="Strong"/>
+            <task id="25" uid="603d7109671645879037c8b73189cd16" name="Ejecución modelos limpieza" meeting="false" start="2025-07-16" duration="5" complete="0" expand="true">
+                <depend id="30" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="26" uid="78c2e35c464f44c3b6d9acf52c44a17b" name="Diseño modelo reconocimiento" meeting="false" start="2025-07-23" duration="5" complete="0" expand="true">
+                <depend id="27" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="9" uid="068a10bb5a3f419c94b9b53d682161fd" name="Sprint 4" meeting="false" start="2025-07-30" duration="10" complete="0" expand="true">
+            <depend id="10" type="2" difference="0" hardness="Strong"/>
+            <task id="27" uid="ada2ed00e41949d19d45ce75a3f657b2" name="Implementación modelo reconocimiento" meeting="false" start="2025-07-30" duration="5" complete="0" expand="true">
+                <depend id="28" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="28" uid="bb047940285f4710b33fe063227fd2c7" name="Pruebas modelo reconocimiento" meeting="false" start="2025-08-06" duration="5" complete="0" expand="true">
+                <depend id="30" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="10" uid="3e3baba864ed45bea07c749ca3651e20" name="Sprint 5" meeting="false" start="2025-08-13" duration="10" complete="0" expand="true">
+            <depend id="11" type="2" difference="0" hardness="Strong"/>
+            <task id="30" uid="00cfd17a398f44028eb2ac8223ca0cb4" name="Ejecución modelo reconocimiento" meeting="false" start="2025-08-13" duration="5" complete="0" expand="true">
+                <depend id="31" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="31" uid="82f11c11ef754b52b9035ec3cabc0cde" name="Análisis de métricas" meeting="false" start="2025-08-20" duration="4" complete="0" expand="true">
+                <depend id="32" type="2" difference="0" hardness="Strong"/>
+                <depend id="34" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="32" uid="a853e5aaeb5143e690b1c5a71166d51d" name="Reunión con cliente" color="#cc0033" meeting="false" start="2025-08-26" duration="1" complete="0" expand="true"/>
+            <task id="29" uid="138f49e95c844ea78c25c69fdb9e1d91" name="Investigación modelo área alternativa" color="#006666" meeting="false" start="2025-08-13" duration="5" complete="0" expand="true">
+                <depend id="34" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="11" uid="13c46e80946649d7b56c95168ffde780" name="Sprint 6" meeting="false" start="2025-08-27" duration="10" complete="0" expand="true">
+            <depend id="12" type="2" difference="0" hardness="Strong"/>
+            <task id="34" uid="49559280793e46b5b82ce46369dc59ac" name="Diseño modelo reconocimiento área alternativa" meeting="false" start="2025-08-27" duration="5" complete="0" expand="true">
+                <depend id="35" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="35" uid="e988cacfe6e743d199fa7fd473a78857" name="Implementación modelo reconocimiento área alternativa" meeting="false" start="2025-09-03" duration="3" complete="0" expand="true">
+                <depend id="36" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="36" uid="32d74a4321c94181b72002c31274782f" name="Pruebas modelo área alternativa" meeting="false" start="2025-09-08" duration="2" complete="0" expand="true">
+                <depend id="37" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="33" uid="6cdd1b2aff3446ec8e06bcd534fbd5bf" name="Investigación modelo dual" color="#006666" meeting="false" start="2025-08-27" duration="10" complete="0" expand="true">
+                <depend id="38" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="12" uid="7fa46ef0d35d408eb7a4a5d6422d07fa" name="Sprint 7" meeting="false" start="2025-09-10" duration="10" complete="0" expand="true">
+            <depend id="13" type="2" difference="0" hardness="Strong"/>
+            <task id="37" uid="6c68ab5805cc41bc80b6ba1eb0787c15" name="Ejecución modelo área alternativa" meeting="false" start="2025-09-10" duration="4" complete="0" expand="true">
+                <depend id="38" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="38" uid="d568d56889c4473db379bf63ca7ac79e" name="Diseño modelo dual" meeting="false" start="2025-09-16" duration="3" complete="0" expand="true">
+                <depend id="39" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="39" uid="1087d130a06642dbb8ee3cd957bcd116" name="Implementación modelo dual" meeting="false" start="2025-09-19" duration="3" complete="0" expand="true">
+                <depend id="40" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="13" uid="ccb9b6b958e74fbbb7f5e96d22e38a53" name="Sprint 8" meeting="false" start="2025-09-24" duration="11" complete="0" expand="true">
+            <depend id="14" type="2" difference="0" hardness="Strong"/>
+            <task id="40" uid="ffc016944bee4b55ae04de093e36403d" name="Pruebas modelo dual" meeting="false" start="2025-09-24" duration="5" complete="0" expand="true">
+                <depend id="41" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="41" uid="7f431dc8d35f47628b62cd4071457c1f" name="Ejecución modelo dual" meeting="false" start="2025-10-01" duration="5" complete="0" expand="true">
+                <depend id="42" type="2" difference="0" hardness="Strong"/>
+                <depend id="44" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="42" uid="3bad59a5797740d19e4e10fe2213dca2" name="Reunión con cliente" color="#cc0033" meeting="false" start="2025-10-08" duration="1" complete="0" expand="true"/>
+            <task id="43" uid="9a222d0051fb429aba8438f10f077706" name="Investigación modelos transformer multimodal" color="#006666" meeting="false" start="2025-09-24" duration="10" complete="0" expand="true">
+                <depend id="46" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="14" uid="d46cf406c0274b889c9247240a44915c" name="Sprint 9" meeting="false" start="2025-10-09" duration="10" complete="0" expand="true">
+            <depend id="15" type="2" difference="0" hardness="Strong"/>
+            <task id="44" uid="c0c9b6f5bb8e4b41adde14c89fdddb22" name="Diseño reportes" meeting="false" start="2025-10-09" duration="5" complete="0" expand="true">
+                <depend id="45" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="45" uid="a8b37d9bb65440fe854403d593e0eccd" name="Evaluación metricas reportes" meeting="false" start="2025-10-16" duration="5" complete="0" expand="true"/>
+            <task id="46" uid="0c6c9092b923460ba6eaca88848c535f" name="Selección transformer multimodal" meeting="false" start="2025-10-09" duration="1" complete="0" expand="true">
+                <depend id="48" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="15" uid="10dcd9fb598846dbab1d9ac62e3c8317" name="Sprint 10" meeting="false" start="2025-10-23" duration="10" complete="0" expand="true">
+            <depend id="47" type="2" difference="0" hardness="Strong"/>
+            <task id="48" uid="57d04e0a397f4dda89c34fb4eab6d0a9" name="Diseño prueba transformer multimodal" meeting="false" start="2025-10-23" duration="5" complete="0" expand="true">
+                <depend id="49" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="49" uid="b7a8ff99ba734e63b3b86f75d9c8dac5" name="Ejecución prueba transformer multimodal" meeting="false" start="2025-10-30" duration="3" complete="0" expand="true">
+                <depend id="50" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="50" uid="87ef1e81b0e743b0aab1745d57674090" name="Comparación resultados modelo vs transformer multimodal" meeting="false" start="2025-11-04" duration="1" complete="0" expand="true">
+                <depend id="51" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="51" uid="8add8a71fba54ceba02f2d16febbb7fe" name="Reunión con cliente" color="#cc0033" meeting="false" start="2025-11-05" duration="1" complete="0" expand="true"/>
+        </task>
+        <task id="47" uid="7173491311e8435292c0fe62bf876d24" name="Sprint 11" meeting="false" start="2025-11-06" duration="27" complete="0" expand="true">
+            <task id="4" uid="4b7f4f52b5874ccdac008ad5c33c0913" name="Redacción memoria" color="#ccffcc" meeting="false" start="2025-11-06" duration="27" complete="0" expand="true">
+                <depend id="3" type="2" difference="0" hardness="Rubber"/>
+            </task>
+            <task id="5" uid="9a6a0a87906148f4a9c4b0248dd5fa94" name="Preparación presentación" color="#ccffcc" meeting="false" start="2025-12-01" duration="10" complete="0" expand="true">
+                <depend id="3" type="2" difference="0" hardness="Rubber"/>
+            </task>
+        </task>
+        <task id="3" uid="ca57cc44950047a68fe70211f1d33a97" name="Defensa trabajo final" meeting="true" start="2025-12-26" duration="0" complete="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
