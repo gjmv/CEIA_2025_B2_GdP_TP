@@ -65,7 +65,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 2.1      & Correcciones versión 2                & {25} de {mayo} de 2025 \\ \hline
 3      & Se completa hasta el punto 12 inclusive & {27} de {mayo} de 2025 \\ \hline
 3.1      & Correcciones versión 3                & {31} de {mayo} de 2025 \\ \hline
-%4      & Se completa el plan	                  & {03} de {junio} de 2025 \\ \hline
+4      & Se completa el plan	                  & {03} de {junio} de 2025 \\ \hline
 
 % Si hay más correcciones pasada la versión 4 también se deben especificar acá
 
@@ -636,38 +636,62 @@ el tratamiento ético de los datos.
   \item Se prohíbe la distribución de los datos de entrenamiento.
 \end{itemize}
 
+\newpage
 \section{13. Gestión de riesgos}
 \label{sec:riesgos}
+a) Identificación de los riesgos y estimación de sus consecuencias:
 
-\begin{consigna}{red}
-a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
- 
-Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos de forma negativa)
+\textbf{Riesgo 1:} el conocimiento inicial sobre la temática es escaso, lo que puede llevar a demoras del proyecto.
 \begin{itemize}
-	\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de (O). 
+	\item Severidad (S): 6. \\
+	Si bien es un riesgo importante, la severidad esta dada por el esfuerzo adicional que puede requerir, y no determina el fracaso del proyecto.
+	\item Probabilidad de ocurrencia (O): 6. \\
+	Es medianamente probable que ocurra. Las estimaciones fueron aproximadas, en función de proyectos de otro estilo, aunque de similar incertidumbre. 
 \end{itemize}   
 
-Riesgo 2:
+\textbf{Riesgo 2:} dificultad para conseguir director de trabajo final.
 \begin{itemize}
-	\item Severidad (S): X.\\
-	Justificación...
-	\item Ocurrencia (O): Y.\\
-	Justificación...
-\end{itemize}
+	\item Severidad (S): 7.\\
+	Implicaría retrasos en el inicio del proyecto.
+	\item Probabilidad de ocurrencia (O): 5.\\
+	Al momento se contactó un candidato que rechazó la dirección. Un segundo candidato no ha contestado. Se están solicitando otros candidatos para avanzar en las invitaciones de dirección.
+\end{itemize}   
 
-Riesgo 3:
+\textbf{Riesgo 3:} modelo dual pensado con razonamiento humano, difícil de llevar a cabo en modelos de inteligencia artificial.
 \begin{itemize}
-	\item Severidad (S):  X.\\
-	Justificación...
-	\item Ocurrencia (O): Y.\\
-	Justificación...
-\end{itemize}
+	\item Severidad (S): 5.\\
+	Invalidaría una parte del proyecto, aunque no es el objetivo principal.
+	\item Probabilidad de ocurrencia (O): 5.\\
+	Debido al desconocimiento de los modelos disponibles, la probabilidad de ocurrencia es incierta (50\%). 
+\end{itemize}   
+
+\textbf{Riesgo 4:} calidad de las imágenes insuficiente para el procesamiento de los modelos.
+\begin{itemize}
+	\item Severidad (S): 9.\\
+	Sería grave, ya que las imágenes provienen de dispositivos que capturan con características similares y no se puede mejorar.
+	\item Probabilidad de ocurrencia (O): 2.\\
+	La calidad suele ser suficiente para la mayoría de los sistemas en las que se utilizaron. 
+\end{itemize}   
+
+\newpage
+\textbf{Riesgo 5:} el modelo transformer multimodal tiene mejores resultados que el modelo desarrollado en el proyecto.
+\begin{itemize}
+	\item Severidad (S): 7. \\
+	Significaría que el modelo desarrollado no es lo suficientemente bueno como para obtener mejores resultados en tiempo y reconocimiento que un modelo genérico.\\
+	\item Probabilidad de ocurrencia (O): 3. \\
+	Se supone que desarrollando un modelo específico para el problema abordado, no debería ocurrir que un modelo genérico tenga mejores resultados. 
+\end{itemize}   
+
+\textbf{Riesgo 6:} los requerimientos de hardware son muy exigentes y no pueden cubrirse con los recursos disponibles.
+\begin{itemize}
+	\item Severidad (S): 7. \\
+	El hardware es un requisito fundamental para el proyecto.\\
+	\item Probabilidad de ocurrencia (O): 6. \\
+	Es posible que ocurra, debido a que es el primer proyecto de inteligencia artificial en la empresa. 
+\end{itemize}   
 
 
-b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
+b) Tabla de gestión de riesgos (RPN = S x O)
 
 \begin{table}[htpb]
 \centering
@@ -675,50 +699,51 @@ b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-\end{tabularx}%
+R1 - conocimiento escaso & 6  & 6  &  36   &  4  &  3  &  12    \\ \hline
+R2 - director proyecto   & 7  & 5  &  35   &  7  &  3  &  21    \\ \hline
+R3 - modelo dual         & 5  & 5  &  25   &  -  &  -  &  -    \\ \hline
+R4 - calidad imágenes    & 9  & 2  &  18   &  -  &  -  &  -    \\ \hline
+R5 - modelo comparativo  & 7  & 3  &  21   &  -  &  -  &  -    \\ \hline
+R6 - hardware  			 & 7  & 6  &  42   &  4  &  3  &  12    \\ \hline
+\end{tabularx}
 \end{table}
 
 Criterio adoptado: 
 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a...
+Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores o iguales a 34.
 
 Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
 
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
  
-Riesgo 1: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-  Nueva asignación de S y O, con su respectiva justificación:
+\textbf{Riesgo 1:} Investigación adicional previo al comienzo del proyecto. Consultas a profesores en materias afines.
   \begin{itemize}
-	\item Severidad (S*): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O*): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
+	\item Severidad (S*): 4. \\
+          El esfuerzo adicional durante el proyecto no debería incrementarse considerablemente.
+	\item Probabilidad de ocurrencia (O*): 3. \\
+          Con suficiente dedicación adicional previo al comienzo, el conocimiento debería ser suficiente para disminuir la probabilidad de ocurrencia.
 	\end{itemize}
 
-Riesgo 2: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
- 
-Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
+\textbf{Riesgo 2:} Se buscarán proyectos con menos similitud para contactar nuevos candidatos. Se esperará menos tiempo para la respuesta del candidato antes de pasar al siguiente.
+  \begin{itemize}
+	\item Severidad (S*): 7. \\
+          No hay cambio en la severidad.
+	\item Probabilidad de ocurrencia (O*): 3. \\
+          Enviando mayor cantidad de invitaciones de dirección, se debería conseguir director.
+	\end{itemize}
 
-\end{consigna}
+\textbf{Riesgo 6:} Se pueden alquilar recursos en la nube. El alumno pone a disposición sus recursos de hardware.
+  \begin{itemize}
+	\item Severidad (S*): 4. \\
+          Los recursos de hardware del alumno pueden ser escasos pero suficientes para afrontar el proyecto.
+	\item Probabilidad de ocurrencia (O*): 3. \\
+          En caso de alquilar, el costo puede ser un factor determinante.
+	\end{itemize}
 
+\newpage
 \section{14. Sprint Review}
 \label{sec:sprint_review}
 
-La revisión de sprint (\emph{Sprint Review}) es una práctica fundamental en metodologías ágiles. Consiste en revisar y evaluar lo que se ha completado al finalizar un sprint. En esta instancia, se presentan los avances y se verifica si las funcionalidades cumplen con los criterios de aceptación establecidos. También se identifican entregables parciales y se consideran ajustes si es necesario.
-
-Aunque el proyecto aún se encuentre en etapa de planificación, esta sección permite proyectar cómo se evaluarán las funcionalidades más importantes del backlog. Esta mirada anticipada favorece la planificación enfocada en valor y permite reflexionar sobre posibles obstáculos.
-
-\textbf{Objetivo:} anticipar cómo se evaluará el avance del proyecto a medida que se desarrollen las funcionalidades, utilizando como base al menos cuatro historias de usuario del \emph{Product Backlog}.
-
-
-Seleccionar al menos 4 HU del Product Backlog. Para cada una, completar la siguiente tabla de revisión proyectada:
-
-\textbf{Formato sugerido:}
 \begin{table}[htpb]
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{|>{\raggedright\arraybackslash}m{2.5cm}|
@@ -730,44 +755,29 @@ Seleccionar al menos 4 HU del Product Backlog. Para cada una, completar la sigui
 \rowcolor[HTML]{CCCCCC}
 \textbf{HU seleccionada} & \textbf{Tareas asociadas} & \textbf{Entregable esperado} & \textbf{¿Cómo sabrás que está cumplida?} & \textbf{Observaciones o riesgos} \\
 \hline
-                         & Tarea 1 &                             &                                           &                                     \\ \cline{2-2}
-\multirow{-2}{=}{HU1}    & Tarea 2 & \multirow{-2}{=}{Módulo funcional} & \multirow{-2}{=}{Cumple criterios de aceptación definidos} & \multirow{-2}{=}{Falta validar con el tutor} \\
+
+& Carga de imágenes y filtrado inicial & & & \\ \cline{2-2}
+\multirow{-4}{=}{HU2 pre-procesamiento}    & Entrenamiento y prueba modelo de limpieza & \multirow{-4}{=}{Conjunto de datos preprocesado, áreas de interés determinadas } & \multirow{-4}{=}{Imágenes mejoradas y mayormente sin ruidos} & \multirow{-4}{=}{Riesgo de limpieza ineficiente o no detección de áreas} \\
 \hline
-                         & Tarea 1 &                             &                                           &                                     \\ \cline{2-2}
-\multirow{-2}{=}{HU3}    & Tarea 2 & \multirow{-2}{=}{Reporte generado} & \multirow{-2}{=}{Exportación disponible y clara} & \multirow{-2}{=}{Requiere datos reales} \\
+
+& Ejecución modelo simple & & & \\ \cline{2-2}
+\multirow{-3}{=}{HU4 modelo principal}    & Análisis de resultados & \multirow{-3}{=}{Modelo entrenado} & \multirow{-3}{=}{Se podrá probar con otros documentos que no pertenezcan al conjunto de datos} & \multirow{-3}{=}{Riesgo de resultados pobres, cliente insatisfecho} \\
 \hline
-                         & Tarea 1 &                             &                                           &                                     \\ \cline{2-2}
-\multirow{-2}{=}{HU5}    & Tarea 2 & \multirow{-2}{=}{Panel de gestión} & \multirow{-2}{=}{Roles diferenciados operativos} & \multirow{-2}{=}{Riesgo en integración} \\
+
+& Ejecución modelo dual & & & \\ \cline{2-2}
+\multirow{-2}{=}{HU6 modelo dual}    & Análisis de resultados & \multirow{-2}{=}{Modelo entrenado} & \multirow{-2}{=}{Podrán procesarse documentos} & \multirow{-2}{=}{Riesgo de no encontrar modelo que sea apto} \\
 \hline
-                         & Tarea 1 &                             &                                           &                                     \\ \cline{2-2}
-\multirow{-2}{=}{HU7}    & Tarea 2 & \multirow{-2}{=}{Informe trimestral} & \multirow{-2}{=}{PDF con gráficos y evolución} & \multirow{-2}{=}{Puede faltar tiempo para ajustes} \\
+
+& Creación reportes & & & \\ \cline{2-2}
+\multirow{-3}{=}{HU7 reportes}    & Análisis reportes & \multirow{-3}{=}{Reporte generado} & \multirow{-3}{=}{Reportes de ejecución disponibles} & \multirow{-3}{=}{Puede no estar en el formato esperado. Cliente insatisfecho} \\
 \hline
+
 \end{tabular}
 \end{table}
 
+\newpage
 \section{15. Sprint Retrospective}    
 \label{sec:sprint_retro}
-
-La retrospectiva de sprint es una práctica orientada a la mejora continua. Al finalizar un sprint, el equipo (o el alumno, si trabaja de forma individual) reflexiona sobre lo que funcionó bien, lo que puede mejorarse y qué acciones concretas pueden implementarse para trabajar mejor en el futuro.
-
-Durante la cursada se propuso el uso de la \textbf{Estrella de la Retrospectiva}, que organiza la reflexión en torno a cinco ejes:
-
-\begin{itemize}
-\item  ¿Qué hacer más?
-\item  ¿Qué hacer menos?
-\item  ¿Qué mantener?
-\item  ¿Qué empezar a hacer?
-\item  ¿Qué dejar de hacer?
-\end{itemize}
-
-Aun en una etapa temprana, esta herramienta permite que el alumno planifique su forma de trabajar, identifique anticipadamente posibles dificultades y diseñe estrategias de organización personal.
-
-\textbf{Objetivo:} reflexionar sobre las condiciones iniciales del proyecto, identificando fortalezas, posibles dificultades y estrategias de mejora, incluso antes del inicio del desarrollo.
-
-
-Completar la siguiente tabla tomando como referencia los cinco ejes de la Estrella de la Retrospectiva (\emph{Starfish} o estrella de mar). Esta instancia te ayudará a definir buenas prácticas desde el inicio y prepararte para enfrentar el trabajo de forma organizada y flexible. Se deberá completar la tabla al menos para 3 sprints técnicos y 1 no técnico.
-
-\textbf{Formato sugerido:}
 
 \begin{table}[htpb]
 \renewcommand{\arraystretch}{1.4}
@@ -779,20 +789,14 @@ Completar la siguiente tabla tomando como referencia los cinco ejes de la Estrel
                 >{\raggedright\arraybackslash}p{2.3cm}|}
 \hline
 \rowcolor[HTML]{CCCCCC} 
-\textbf{Sprint tipo y N°} & \textbf{¿Qué hacer más?} & \textbf{¿Qué hacer menos?} & \textbf{¿Qué mantener?} & \textbf{¿Qué empezar a hacer?} & \textbf{¿Qué dejar de hacer?} \\
-\hline
-Sprint técnico - 1 & Validaciones continuas con el alumno & Cambios sin versión registrada & Pruebas con datos simulados & Documentar cambios propuestos & Ajustes sin análisis de impacto \\
-\hline
-Sprint técnico - 2 & Verificar configuraciones en múltiples escenarios & Modificar parámetros sin guardar historial & Perfiles reutilizables & Usar logs para configuración & Repetir pruebas manuales innecesarias \\
-\hline
-Sprint técnico - 8 & Comparar correlaciones con casos previos & Cambiar parámetros sin justificar & Revisión cruzada de métricas & Anotar configuraciones usadas & Trabajar sin respaldo de datos \\
-\hline
-Sprint no técnico - 12 (por ej.: ``Defensa'') & Ensayos orales con feedback & Cambiar contenidos en la memoria & Material visual claro & Dividir la presentación por bloques & Agregar gráficos difíciles de explicar \\
-\hline
+\textbf{Sprint tipo y N°} & \textbf{¿Qué hacer más?} & \textbf{¿Qué hacer menos?} & \textbf{¿Qué mantener?} & \textbf{¿Qué empezar a hacer?} & \textbf{¿Qué dejar de hacer?} \\\hline
+Sprint no técnico - 0 (Planificación) & Investigación previa sobre modelos & Sprints con exceso de tareas  & Reuniones con el cliente & Documentación más detallada & Crear tareas complejas \\ \hline
+Sprint técnico - 1 & Lectura sobre aplicación del modelo & Pruebas de gran volumen & Calidad del código & Documentar resultado de pruebas & Pruebas repetidas sobre el mismo conjunto de datos \\ \hline
+
+
+Sprint técnico - 4 & Planificar tareas con mas detalle & Modificación individual de parámetros & Historial de ejecuciones & Validaciones cruzadas & Pruebas de parámetros a ojo \\ \hline
+Sprint técnico - 8 & Versionado de cambios & Respaldos locales & Intensidad de trabajo & Métricas tempranas & Código duplicado \\ \hline
 \end{tabular}
 \end{table}
-
-
-
 
 \end{document}
